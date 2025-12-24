@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: hospital-infantil-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: PROJECT_NAME
+        value: Hospital Infantil
+      - key: PROJECT_URL
+        value: https://hila-sigma.vercel.app/
+      - key: GROQ_API_KEY
+        sync: false  # Configura esto manualmente en el dashboard por seguridad

@@ -1,0 +1,9 @@
+node_modules/
+.env
+*.log
+.DS_Store
+
+# Descomentar estas líneas si NO quieres incluir PDFs en el repositorio
+# Si quieres que Render tenga acceso a los PDFs, deja esto comentado
+# *.pdf
+# !PDFS/*.pdf
