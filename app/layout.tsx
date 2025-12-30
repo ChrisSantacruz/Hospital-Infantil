@@ -162,9 +162,9 @@ export default function RootLayout({
 
                 <footer id="contacto" className="py-24 px-6 md:px-12 bg-editorial-white border-t border-editorial-dark/5 flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
                     <div className="max-w-md">
-                        <h2 className="font-editorial text-4xl mb-6 text-editorial-dark">Colaborar</h2>
+                        <h2 className="font-editorial text-4xl mb-6 text-editorial-dark">CONTACTOS</h2>
                         <p className="font-sans text-editorial-stone font-light leading-relaxed mb-8">
-                            Interesados en desarrollar espacios de salud con altos estándares arquitectónicos y humanos.
+                            CSN ARQUITECTOS CONSTRUCTORES
                         </p>
                         <a href="https://wa.me/573155232179" target="_blank" rel="noopener noreferrer" className="text-xl border-b border-editorial-dark pb-1 hover:opacity-60 transition-opacity">
                             Contactar por WhatsApp
