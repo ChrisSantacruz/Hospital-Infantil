@@ -175,6 +175,12 @@ export async function generateAIResponse(userMessage) {
     return chatCompletion.choices[0]?.message?.content || 'No se pudo generar una respuesta.';
   } catch (error) {
     console.error('Error en generateAIResponse:', error);
+    
+    // Manejo específico de errores de rate limiting
+    if (error.status === 413 || error.message.includes('rate_limit_exceeded')) {
+      return 'Lo siento, el contexto de la consulta es muy extenso. Por favor, intenta hacer una pregunta más específica sobre un aspecto particular del proyecto (arquitectura, materiales, sustentabilidad, ejecución, etc.).';
+    }
+    
     throw new Error(`Error al generar respuesta: ${error.message}`);
   }
 }
