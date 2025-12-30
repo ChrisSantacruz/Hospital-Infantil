@@ -38,7 +38,7 @@ const laminasPDFs = [
     },
     {
         lamina: "Presupuesto de Obra",
-        path: "/resources/presupuesto_obra.pdf"
+        path: "/resources/PRESUPUESTO GENERAL DE OBRA.pdf"
     }
 ];
 
