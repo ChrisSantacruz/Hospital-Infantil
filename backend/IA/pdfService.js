@@ -8,9 +8,9 @@ const __dirname = path.dirname(__filename);
 
 /**
  * Trunca el texto de un PDF a un máximo de caracteres
- * Límite optimizado para balance entre información técnica y límites de API
+ * Límite optimizado para cumplir con límites de API de Groq (12,000 tokens)
  */
-function truncateText(text, maxChars = 5000) {
+function truncateText(text, maxChars = 2000) {
   if (text.length <= maxChars) return text;
   return text.substring(0, maxChars) + '\n... (contenido truncado)\n';
 }
@@ -49,8 +49,8 @@ export async function extractPDFContent() {
           const data = await pdf(dataBuffer);
           console.log(`✓ Procesado: ${file} (${data.numpages} páginas)`);
           
-          // Truncar el texto para balance entre información técnica y límites de API
-          const truncatedText = truncateText(data.text, 5000);
+          // Truncar para cumplir límites de API Groq (12,000 tokens)
+          const truncatedText = truncateText(data.text, 2000);
           
           return {
             filename: file,
