@@ -35,6 +35,10 @@ const laminasPDFs = [
     {
         lamina: "Lámina 7 - Acabados",
         path: "/resources/Descargas/LAMINA 7 ACABADOS.pdf"
+    },
+    {
+        lamina: "Presupuesto de Obra",
+        path: "/resources/presupuesto_obra.pdf"
     }
 ];
 

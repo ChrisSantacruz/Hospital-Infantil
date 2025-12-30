@@ -7,6 +7,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /**
+ * Trunca el texto de un PDF a un máximo de caracteres
+ */
+function truncateText(text, maxChars = 2000) {
+  if (text.length <= maxChars) return text;
+  return text.substring(0, maxChars) + '\n... (contenido truncado)\n';
+}
+
+/**
  * Lee y extrae el texto de todos los PDFs en la carpeta PDFS
  * @returns {Promise<string>} Texto combinado de todos los PDFs
  */
@@ -39,9 +47,13 @@ export async function extractPDFContent() {
         try {
           const data = await pdf(dataBuffer);
           console.log(`✓ Procesado: ${file} (${data.numpages} páginas)`);
+          
+          // Truncar el texto para reducir tokens
+          const truncatedText = truncateText(data.text, 2000);
+          
           return {
             filename: file,
-            text: data.text,
+            text: truncatedText,
             pages: data.numpages
           };
         } catch (error) {

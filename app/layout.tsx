@@ -25,11 +25,9 @@ export default function RootLayout({
             <body className="antialiased min-h-screen flex flex-col relative font-sans">
                 {/* Navigation Bar */}
                 <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 md:px-12 md:py-6 bg-white/5 backdrop-blur-md transition-all duration-300 border-b border-white/10">
-                    <div className="flex items-center gap-4">
-                        <Link href="/" className="font-editorial text-2xl md:text-3xl tracking-tight text-editorial-dark hover:opacity-80 transition-opacity">
-                            CSN Arquitectos
-                        </Link>
-                    </div>
+                    <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+                        <img src="/resources/logoCSN.png" alt="CSN Arquitectos Constructores" className="h-16 md:h-20 w-auto" />
+                    </Link>
 
                     <div className="hidden md:flex items-center gap-6 font-sans text-xs tracking-widest uppercase text-editorial-stone">
                         <Link href="#proyecto" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Proyecto</Link>
@@ -37,7 +35,7 @@ export default function RootLayout({
                         <Link href="#materiales" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Diseño</Link>
                         <Link href="#sustentabilidad" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Sustentabilidad</Link>
                         <Link href="#ejecucion" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Ejecución</Link>
-                        <Link href="#estimaciones" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Estimaciones</Link>
+                        <a href="/resources/PRESUPUESTO GENERAL DE OBRA.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Presupuesto</a>
                         <Link href="#documentacion" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Descargas</Link>
                         <Link href="#galeria" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Galería</Link>
                     </div>
@@ -124,13 +122,15 @@ export default function RootLayout({
                                 >
                                     Acabados
                                 </Link>
-                                <Link 
-                                    href="#estimaciones" 
+                                <a 
+                                    href="/resources/presupuesto_obra.pdf" 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     onClick={closeMenu}
                                     className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
                                 >
-                                    Estimaciones
-                                </Link>
+                                    Presupuesto
+                                </a>
                                 <Link                                     href="#documentacion" 
                                     onClick={closeMenu}
                                     className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
