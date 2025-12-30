@@ -8,8 +8,9 @@ const __dirname = path.dirname(__filename);
 
 /**
  * Trunca el texto de un PDF a un máximo de caracteres
+ * Límite aumentado para capturar información técnica completa de las láminas
  */
-function truncateText(text, maxChars = 2000) {
+function truncateText(text, maxChars = 8000) {
   if (text.length <= maxChars) return text;
   return text.substring(0, maxChars) + '\n... (contenido truncado)\n';
 }
@@ -48,8 +49,8 @@ export async function extractPDFContent() {
           const data = await pdf(dataBuffer);
           console.log(`✓ Procesado: ${file} (${data.numpages} páginas)`);
           
-          // Truncar el texto para reducir tokens
-          const truncatedText = truncateText(data.text, 2000);
+          // Truncar el texto para reducir tokens pero mantener toda la información técnica
+          const truncatedText = truncateText(data.text, 8000);
           
           return {
             filename: file,
