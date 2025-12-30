@@ -54,7 +54,7 @@ export default function Acabados() {
                     </div>
                     <div className="p-8 flex items-center justify-center bg-white">
                         <img
-                            src="/resources/imagenes pdfs/lamina7/plantaacabados.jpg"
+                            src="/resources/imagenes pdfs/lamina7/principal1.jpg"
                             alt="Planta de Acabados"
                             className="w-full h-auto object-contain"
                         />

@@ -20,6 +20,7 @@ export default function RootLayout({
             <head>
                 <title>Hospital Infantil Los Ángeles | Reorganización Funcional</title>
                 <meta name="description" content="Propuesta arquitectónica para la reorganización funcional del servicio de urgencias pediátricas." />
+                <link rel="icon" type="image/jpeg" href="/resources/logoHospitalInfantil.jpg" />
             </head>
             <body className="antialiased min-h-screen flex flex-col relative font-sans">
                 {/* Navigation Bar */}
@@ -36,6 +37,7 @@ export default function RootLayout({
                         <Link href="#materiales" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Diseño</Link>
                         <Link href="#sustentabilidad" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Sustentabilidad</Link>
                         <Link href="#ejecucion" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Ejecución</Link>
+                        <Link href="#estimaciones" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Estimaciones</Link>
                         <Link href="#documentacion" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Descargas</Link>
                         <Link href="#galeria" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Galería</Link>
                     </div>
@@ -121,6 +123,13 @@ export default function RootLayout({
                                     className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
                                 >
                                     Acabados
+                                </Link>
+                                <Link 
+                                    href="#estimaciones" 
+                                    onClick={closeMenu}
+                                    className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
+                                >
+                                    Estimaciones
                                 </Link>
                                 <Link                                     href="#documentacion" 
                                     onClick={closeMenu}

@@ -21,10 +21,10 @@ const features = [
 export default function ProjectSection() {
     return (
         <section className="w-full py-16 md:py-20 bg-editorial-white px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
-            <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-[1920px] mx-auto">
 
-                {/* Left Column: Organized Text Content */}
-                <div className="w-full max-w-2xl">
+                {/* Organized Text Content */}
+                <div className="w-full max-w-4xl mx-auto">
                     <motion.span
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -49,51 +49,31 @@ export default function ProjectSection() {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="font-sans text-editorial-stone text-sm leading-relaxed mb-12"
+                        className="font-sans text-editorial-stone text-base leading-relaxed mb-12"
                     >
                         La propuesta arquitectónica se desarrolló estrictamente bajo los lineamientos normativos, enfocándose en la seguridad, durabilidad y confort para los pacientes y el personal médico.
                     </motion.p>
 
                     {/* Bullet Points / Features */}
-                    <div className="space-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {features.map((feature, idx) => (
                             <motion.div
                                 key={idx}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.2 + (idx * 0.1) }}
-                                className="flex gap-4 items-start group"
+                                className="bg-editorial-concrete/5 border border-editorial-stone/10 rounded-sm p-6"
                             >
-                                <div className="mt-1 w-5 h-5 rounded-full border border-editorial-stone/30 flex items-center justify-center flex-shrink-0 group-hover:border-editorial-dark transition-colors">
-                                    <Check className="w-3 h-3 text-editorial-dark opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <div className="w-10 h-10 rounded-full bg-editorial-dark/10 flex items-center justify-center mb-4">
+                                    <Check className="w-5 h-5 text-editorial-dark" />
                                 </div>
-                                <div>
-                                    <h3 className="font-editorial text-xl text-editorial-dark mb-1">{feature.title}</h3>
-                                    <p className="font-sans text-sm text-editorial-stone leading-relaxed">{feature.description}</p>
-                                </div>
+                                <h3 className="font-editorial text-lg text-editorial-dark mb-2">{feature.title}</h3>
+                                <p className="font-sans text-sm text-editorial-stone leading-relaxed">{feature.description}</p>
                             </motion.div>
                         ))}
                     </div>
                 </div>
-
-                {/* Right Column: Large Image */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.98 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="w-full h-full relative min-h-[500px] bg-editorial-concrete/10 rounded-sm border border-editorial-stone/10 p-8 flex items-center justify-center"
-                >
-                    <img
-                        src="https://hila-sigma.vercel.app/images/planta.png"
-                        alt="Planta Arquitectónica"
-                        className="w-full h-auto object-contain mix-blend-multiply opacity-95 max-h-[700px]"
-                    />
-                    <div className="absolute bottom-6 right-6 text-xs font-sans uppercase tracking-widest text-editorial-stone bg-white/80 backdrop-blur-sm px-4 py-2 rounded-sm border border-editorial-stone/10">
-                        Planta General
-                    </div>
-                </motion.div>
 
             </div>
         </section>

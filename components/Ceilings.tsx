@@ -22,7 +22,7 @@ export default function Ceilings() {
                             Lámina 3 · Cielos e Iluminación
                         </span>
                         <h2 className="font-editorial text-4xl md:text-5xl text-editorial-dark mb-8 leading-tight">
-                            Diseño de Cielorrasos <br /> 
+                            Diseño de Cielo Falso <br /> 
                             <span className="italic text-editorial-stone">y Confort Lumínico</span>
                         </h2>
                         <p className="font-sans text-editorial-stone text-lg leading-relaxed font-light max-w-2xl">

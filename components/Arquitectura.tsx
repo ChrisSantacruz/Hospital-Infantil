@@ -63,10 +63,10 @@ export default function Arquitectura() {
                     </div>
                     <div 
                         className="p-8 flex items-center justify-center bg-white cursor-pointer"
-                        onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/Lamina1/plantaArquitectonica.jpg', alt: 'Planta Arquitectónica Detallada - Click para ampliar' })}
+                        onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/Lamina1/principal1.jpg', alt: 'Planta Arquitectónica Detallada - Click para ampliar' })}
                     >
                         <img
-                            src="/resources/imagenes pdfs/Lamina1/plantaArquitectonica.jpg"
+                            src="/resources/imagenes pdfs/Lamina1/principal1.jpg"
                             alt="Planta Arquitectónica"
                             className="w-full h-auto object-contain hover:opacity-90 transition-opacity"
                         />
