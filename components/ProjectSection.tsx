@@ -20,7 +20,7 @@ const features = [
 
 export default function ProjectSection() {
     return (
-        <section className="w-full py-24 md:py-32 bg-editorial-white px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
+        <section className="w-full py-16 md:py-20 bg-editorial-white px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
             <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                 {/* Left Column: Organized Text Content */}

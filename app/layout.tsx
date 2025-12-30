@@ -30,11 +30,13 @@ export default function RootLayout({
                         </Link>
                     </div>
 
-                    <div className="hidden md:flex items-center gap-8 font-sans text-sm tracking-widest uppercase text-editorial-stone">
+                    <div className="hidden md:flex items-center gap-6 font-sans text-xs tracking-widest uppercase text-editorial-stone">
                         <Link href="#proyecto" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Proyecto</Link>
                         <Link href="#arquitectura" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Arquitectura</Link>
-                        <Link href="#materiales" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Materialidad</Link>
+                        <Link href="#materiales" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Diseño</Link>
                         <Link href="#sustentabilidad" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Sustentabilidad</Link>
+                        <Link href="#ejecucion" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Ejecución</Link>
+                        <Link href="#documentacion" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Descargas</Link>
                         <Link href="#galeria" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Galería</Link>
                     </div>
 
@@ -83,14 +85,14 @@ export default function RootLayout({
                                     onClick={closeMenu}
                                     className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
                                 >
-                                    Materialidad
+                                    Diseño Pisos
                                 </Link>
                                 <Link 
                                     href="#cielos" 
                                     onClick={closeMenu}
                                     className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
                                 >
-                                    Cielos
+                                    Diseño Cielos
                                 </Link>
                                 <Link 
                                     href="#sustentabilidad" 
@@ -107,13 +109,14 @@ export default function RootLayout({
                                     Ejecución
                                 </Link>
                                 <Link 
-                                    href="#sistemas" 
+                                    href="#demoliciones" 
                                     onClick={closeMenu}
                                     className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
                                 >
-                                    Sistemas
+                                    Demoliciones
                                 </Link>
-                                <Link                                     href="#acabados" 
+                                <Link 
+                                    href="#acabados" 
                                     onClick={closeMenu}
                                     className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
                                 >
@@ -123,7 +126,7 @@ export default function RootLayout({
                                     onClick={closeMenu}
                                     className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
                                 >
-                                    Documentación
+                                    Descargas
                                 </Link>
                                 <Link 
                                     href="#galeria" 

@@ -73,7 +73,7 @@ export default function Gallery() {
         : renders.filter(r => r.category === selectedCategory);
 
     return (
-        <section className="w-full py-24 md:py-32 bg-editorial-concrete/5 px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
+        <section className="w-full py-16 md:py-20 bg-editorial-concrete/5 px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
             <div className="max-w-[1920px] mx-auto">
 
                 {/* Header */}

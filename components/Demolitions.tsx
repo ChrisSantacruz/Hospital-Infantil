@@ -65,7 +65,7 @@ const pdfs = [
 export default function Demolitions() {
     const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
     return (
-        <section className="w-full py-24 md:py-32 bg-editorial-concrete/5 px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
+        <section className="w-full py-16 md:py-20 bg-editorial-concrete/5 px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
             <div className="max-w-[1920px] mx-auto">
 
                 {/* Header */}
@@ -133,9 +133,9 @@ export default function Demolitions() {
                             <p className="font-sans text-xs text-editorial-stone mt-1">Distribución por sectores</p>
                         </div>
                         <div className="p-6 bg-editorial-concrete/5">
-                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina6/fasesdedemolicion.png', alt: 'Fases de Demolición - Distribución por sectores' })}>
+                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina6/fasesdedemolicion.jpg', alt: 'Fases de Demolición - Distribución por sectores' })}>
                                 <img
-                                    src="/resources/imagenes pdfs/lamina6/fasesdedemolicion.png"
+                                    src="/resources/imagenes pdfs/lamina6/fasesdedemolicion.jpg"
                                     alt="Fases de Demolición"
                                     className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
                                 />
@@ -154,9 +154,9 @@ export default function Demolitions() {
                             <p className="font-sans text-xs text-editorial-stone mt-1">Estado final post-demolición</p>
                         </div>
                         <div className="p-6 bg-editorial-concrete/5">
-                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina6/plantaarquitectonicapropuesta.png', alt: 'Planta Arquitectónica Propuesta - Estado final post-demolición' })}>
+                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina6/plantaarquitectonicapropuesta.jpg', alt: 'Planta Arquitectónica Propuesta - Estado final post-demolición' })}>
                                 <img
-                                    src="/resources/imagenes pdfs/lamina6/plantaarquitectonicapropuesta.png"
+                                    src="/resources/imagenes pdfs/lamina6/plantaarquitectonicapropuesta.jpg"
                                     alt="Planta Arquitectónica Propuesta"
                                     className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
                                 />
@@ -258,38 +258,7 @@ export default function Demolitions() {
                     </div>
                 </motion.div>
 
-                {/* PDF Downloads */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                >
-                    <h3 className="font-editorial text-2xl text-editorial-dark mb-6">
-                        Documentación Técnica
-                    </h3>
-                    <div className="grid grid-cols-1 gap-4">
-                        {pdfs.map((pdf, idx) => (
-                            <a
-                                key={idx}
-                                href={pdf.path}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex items-center justify-between bg-white border border-editorial-stone/20 hover:border-editorial-dark/40 rounded-sm p-6 transition-all"
-                            >
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 bg-editorial-dark/5 rounded flex items-center justify-center group-hover:bg-editorial-dark/10 transition-colors">
-                                        <FileText className="w-6 h-6 text-editorial-dark" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-editorial text-lg text-editorial-dark mb-1">{pdf.title}</h4>
-                                        <p className="text-xs text-editorial-stone">{pdf.description}</p>
-                                    </div>
-                                </div>
-                                <ExternalLink className="w-5 h-5 text-editorial-stone group-hover:text-editorial-dark transition-colors" />
-                            </a>
-                        ))}
-                    </div>
-                </motion.div>
+
 
             </div>
 

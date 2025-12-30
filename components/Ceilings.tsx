@@ -8,7 +8,7 @@ import ImageLightbox from './ImageLightbox';
 export default function Ceilings() {
     const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
     return (
-        <section className="w-full py-24 md:py-32 bg-editorial-concrete/5 px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
+        <section className="w-full py-16 md:py-20 bg-editorial-concrete/5 px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
             <div className="max-w-[1920px] mx-auto">
 
                 {/* Header */}
@@ -79,9 +79,9 @@ export default function Ceilings() {
                             <p className="font-sans text-xs text-editorial-stone mt-1">Layout general</p>
                         </div>
                         <div className="p-6 bg-editorial-concrete/5">
-                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina3/plantadiseñocielos.png', alt: 'Planta Diseño de Cielos - Layout general' })}>
+                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina3/plantadiseñocielos.jpg', alt: 'Planta Diseño de Cielos - Layout general' })}>
                                 <img
-                                    src="/resources/imagenes pdfs/lamina3/plantadiseñocielos.png"
+                                    src="/resources/imagenes pdfs/lamina3/plantadiseñocielos.jpg"
                                     alt="Planta Diseño de Cielos"
                                     className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
                                 />
@@ -112,70 +112,6 @@ export default function Ceilings() {
                     </motion.div>
 
                 </div>
-
-                {/* Renders de Espacios */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-12"
-                >
-                    <h3 className="font-editorial text-2xl text-editorial-dark mb-6">Visualizaciones de Iluminación</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="bg-white border border-editorial-stone/10 rounded-sm overflow-hidden">
-                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina3/HALL CONSULTORIOS.png', alt: 'Hall Consultorios - Sistema pergolado con iluminación natural' })}>
-                                <img
-                                    src="/resources/imagenes pdfs/lamina3/HALL CONSULTORIOS.png"
-                                    alt="Hall Consultorios"
-                                    className="w-full h-64 object-cover cursor-pointer hover:opacity-90 transition-opacity"
-                                />
-                            </div>
-                            <div className="p-4">
-                                <h4 className="font-sans font-semibold text-sm text-editorial-dark">Hall Consultorios</h4>
-                                <p className="text-xs text-editorial-stone mt-1">Sistema pergolado con iluminación natural</p>
-                            </div>
-                        </div>
-                        <div className="bg-white border border-editorial-stone/10 rounded-sm overflow-hidden">
-                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina3/PASILLO TRANSFER.png', alt: 'Pasillo Transfer - Iluminación LED integrada' })}>
-                                <img
-                                    src="/resources/imagenes pdfs/lamina3/PASILLO TRANSFER.png"
-                                    alt="Pasillo Transfer"
-                                    className="w-full h-64 object-cover cursor-pointer hover:opacity-90 transition-opacity"
-                                />
-                            </div>
-                            <div className="p-4">
-                                <h4 className="font-sans font-semibold text-sm text-editorial-dark">Pasillo Transfer</h4>
-                                <p className="text-xs text-editorial-stone mt-1">Iluminación LED integrada</p>
-                            </div>
-                        </div>
-                        <div className="bg-white border border-editorial-stone/10 rounded-sm overflow-hidden">
-                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina3/HALL SALA DE YESOS DIA ILUMINACION NATURAL.png', alt: 'Hall Yesos - Día - Iluminación natural controlada' })}>
-                                <img
-                                    src="/resources/imagenes pdfs/lamina3/HALL SALA DE YESOS DIA ILUMINACION NATURAL.png"
-                                    alt="Hall Yesos Día"
-                                    className="w-full h-64 object-cover cursor-pointer hover:opacity-90 transition-opacity"
-                                />
-                            </div>
-                            <div className="p-4">
-                                <h4 className="font-sans font-semibold text-sm text-editorial-dark">Hall Yesos - Día</h4>
-                                <p className="text-xs text-editorial-stone mt-1">Iluminación natural controlada</p>
-                            </div>
-                        </div>
-                        <div className="bg-white border border-editorial-stone/10 rounded-sm overflow-hidden">
-                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina3/HALL YESOS NOCHE ILUMINACION.png', alt: 'Hall Yesos - Noche - Iluminación artificial LED' })}>
-                                <img
-                                    src="/resources/imagenes pdfs/lamina3/HALL YESOS NOCHE ILUMINACION.png"
-                                    alt="Hall Yesos Noche"
-                                    className="w-full h-64 object-cover cursor-pointer hover:opacity-90 transition-opacity"
-                                />
-                            </div>
-                            <div className="p-4">
-                                <h4 className="font-sans font-semibold text-sm text-editorial-dark">Hall Yesos - Noche</h4>
-                                <p className="text-xs text-editorial-stone mt-1">Iluminación artificial LED</p>
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
 
                 {/* Technical Description */}
                 <motion.div

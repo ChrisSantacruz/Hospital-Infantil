@@ -31,7 +31,7 @@ const sustainabilityFeatures = [
 export default function Sustainability() {
     const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
     return (
-        <section className="w-full py-24 md:py-32 bg-editorial-white px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
+        <section className="w-full py-16 md:py-20 bg-editorial-white px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
             <div className="max-w-[1920px] mx-auto">
 
                 {/* Header */}
@@ -147,9 +147,9 @@ export default function Sustainability() {
                                 <p className="text-xs text-editorial-stone mt-1">Esquema de ventilación natural</p>
                             </div>
                             <div className="p-4 bg-editorial-concrete/5">
-                                <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina4/seccionaa.png', alt: 'Sección A-A - Esquema de ventilación natural' })}>
+                                <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina4/seccionaa.jpg', alt: 'Sección A-A - Esquema de ventilación natural' })}>
                                     <img
-                                        src="/resources/imagenes pdfs/lamina4/seccionaa.png"
+                                        src="/resources/imagenes pdfs/lamina4/seccionaa.jpg"
                                         alt="Sección A-A"
                                         className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
                                     />
@@ -186,9 +186,9 @@ export default function Sustainability() {
                         <p className="font-sans text-xs text-editorial-stone mt-1">Distribución de estrategias pasivas</p>
                     </div>
                     <div className="p-8 bg-editorial-concrete/5">
-                        <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina4/plantaarc.png', alt: 'Planta Arquitectónica Sustentabilidad - Distribución de estrategias pasivas' })}>
+                        <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina4/plantaarc.jpg', alt: 'Planta Arquitectónica Sustentabilidad - Distribución de estrategias pasivas' })}>
                             <img
-                                src="/resources/imagenes pdfs/lamina4/plantaarc.png"
+                                src="/resources/imagenes pdfs/lamina4/plantaarc.jpg"
                                 alt="Planta Arquitectónica Sustentabilidad"
                                 className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
                             />

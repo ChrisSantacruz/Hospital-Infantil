@@ -61,36 +61,16 @@ const phases = [
             'Instalación de carpintería y puertas',
             'Colocación de vidrios y divisiones'
         ]
-    },
-    {
-        number: 'Fase 5',
-        name: 'Equipamiento y Puesta en Marcha',
-        duration: '2 semanas',
-        color: 'bg-green-500/10 border-green-500/30',
-        textColor: 'text-green-700',
-        activities: [
-            'Instalación de mobiliario clínico y administrativo',
-            'Montaje de equipos médicos',
-            'Pruebas de sistemas e instalaciones',
-            'Limpieza general y desinfección',
-            'Entrega y capacitación al personal'
-        ]
     }
 ];
 
-const pdfs = [
-    {
-        title: 'Lámina 5 - Fases de Ejecución',
-        description: 'Planta arquitectónica con distribución de fases constructivas',
-        path: '/resources/LAMINA 5 FASES DE EJECUCION DEL PROYECTO (1).pdf'
-    }
-];
+
 
 export default function Execution() {
     const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
     
     return (
-        <section className="w-full py-24 md:py-32 bg-white px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
+        <section className="w-full py-16 md:py-20 bg-white px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
             <div className="max-w-[1920px] mx-auto">
 
                 {/* Header */}
@@ -108,7 +88,7 @@ export default function Execution() {
                             <span className="italic text-editorial-stone">del Proyecto</span>
                         </h2>
                         <p className="font-sans text-editorial-stone text-lg leading-relaxed font-light max-w-2xl">
-                            Cronograma de obra estructurado en 5 fases consecutivas que totalizan 17 semanas de ejecución. 
+                            Cronograma de obra estructurado en 4 fases consecutivas que totalizan 15 semanas de ejecución. 
                             Cada fase responde a la lógica constructiva, minimizando interferencias con las operaciones del hospital 
                             y garantizando el cumplimiento de estándares de bioseguridad.
                         </p>
@@ -156,9 +136,9 @@ export default function Execution() {
                     <h3 className="font-editorial text-2xl text-editorial-dark mb-6">Distribución por Fases</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div className="bg-white border border-editorial-stone/10 rounded-sm overflow-hidden">
-                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina5/fase1.png', alt: 'Fase 1 - Preparatoria - 2 semanas' })}>
+                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina5/fase1.jpg', alt: 'Fase 1 - Preparatoria - 2 semanas' })}>
                                 <img
-                                    src="/resources/imagenes pdfs/lamina5/fase1.png"
+                                    src="/resources/imagenes pdfs/lamina5/fase1.jpg"
                                     alt="Fase 1"
                                     className="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity"
                                 />
@@ -169,9 +149,9 @@ export default function Execution() {
                             </div>
                         </div>
                         <div className="bg-white border border-editorial-stone/10 rounded-sm overflow-hidden">
-                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina5/fase2.png', alt: 'Fase 2 - Demoliciones - 3 semanas' })}>
+                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina5/fase2.jpg', alt: 'Fase 2 - Demoliciones - 3 semanas' })}>
                                 <img
-                                    src="/resources/imagenes pdfs/lamina5/fase2.png"
+                                    src="/resources/imagenes pdfs/lamina5/fase2.jpg"
                                     alt="Fase 2"
                                     className="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity"
                                 />
@@ -182,9 +162,9 @@ export default function Execution() {
                             </div>
                         </div>
                         <div className="bg-white border border-editorial-stone/10 rounded-sm overflow-hidden">
-                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina5/fase3.png', alt: 'Fase 3 - Obra Gris - 6 semanas' })}>
+                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina5/fase3.jpg', alt: 'Fase 3 - Obra Gris - 6 semanas' })}>
                                 <img
-                                    src="/resources/imagenes pdfs/lamina5/fase3.png"
+                                    src="/resources/imagenes pdfs/lamina5/fase3.jpg"
                                     alt="Fase 3"
                                     className="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity"
                                 />
@@ -195,9 +175,9 @@ export default function Execution() {
                             </div>
                         </div>
                         <div className="bg-white border border-editorial-stone/10 rounded-sm overflow-hidden">
-                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina5/fase4.png', alt: 'Fase 4 - Acabados - 4 semanas + 2 equipamiento' })}>
+                            <div onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/lamina5/fase4.jpg', alt: 'Fase 4 - Acabados - 4 semanas + 2 equipamiento' })}>
                                 <img
-                                    src="/resources/imagenes pdfs/lamina5/fase4.png"
+                                    src="/resources/imagenes pdfs/lamina5/fase4.jpg"
                                     alt="Fase 4"
                                     className="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity"
                                 />
@@ -211,7 +191,7 @@ export default function Execution() {
                 </motion.div>
 
                 {/* Phases Timeline */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                     {phases.map((phase, idx) => (
                         <motion.div
                             key={idx}
@@ -251,8 +231,8 @@ export default function Execution() {
                     <div className="bg-editorial-concrete/5 border border-editorial-stone/10 rounded-sm p-6">
                         <Calendar className="w-6 h-6 text-editorial-dark mb-4" />
                         <h3 className="font-editorial text-xl text-editorial-dark mb-2">Duración Total</h3>
-                        <p className="font-sans text-3xl font-light text-editorial-stone mb-2">17 semanas</p>
-                        <p className="text-xs text-editorial-stone/60 uppercase tracking-wider">Aprox. 4 meses</p>
+                        <p className="font-sans text-3xl font-light text-editorial-stone mb-2">15 semanas</p>
+                        <p className="text-xs text-editorial-stone/60 uppercase tracking-wider">Aprox. 3.5 meses</p>
                     </div>
                     <div className="bg-editorial-concrete/5 border border-editorial-stone/10 rounded-sm p-6">
                         <Users className="w-6 h-6 text-editorial-dark mb-4" />
@@ -327,39 +307,6 @@ export default function Execution() {
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </motion.div>
-
-                {/* PDF Downloads */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                >
-                    <h3 className="font-editorial text-2xl text-editorial-dark mb-6">
-                        Documentación Técnica
-                    </h3>
-                    <div className="grid grid-cols-1 gap-4">
-                        {pdfs.map((pdf, idx) => (
-                            <a
-                                key={idx}
-                                href={pdf.path}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex items-center justify-between bg-white border border-editorial-stone/20 hover:border-editorial-dark/40 rounded-sm p-6 transition-all"
-                            >
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 bg-editorial-dark/5 rounded flex items-center justify-center group-hover:bg-editorial-dark/10 transition-colors">
-                                        <FileText className="w-6 h-6 text-editorial-dark" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-editorial text-lg text-editorial-dark mb-1">{pdf.title}</h4>
-                                        <p className="text-xs text-editorial-stone">{pdf.description}</p>
-                                    </div>
-                                </div>
-                                <ExternalLink className="w-5 h-5 text-editorial-stone group-hover:text-editorial-dark transition-colors" />
-                            </a>
-                        ))}
                     </div>
                 </motion.div>
 

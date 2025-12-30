@@ -11,9 +11,10 @@ const zones = [
     { name: "Urgencias", area: "178.31 M²" }
 ];
 
-export default function Arquitectura() {    const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
+export default function Arquitectura() {
+    const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
     return (
-        <section className="w-full py-24 md:py-32 bg-editorial-white px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
+        <section className="w-full py-16 md:py-20 bg-editorial-white px-6 md:px-12 lg:px-24 border-b border-editorial-stone/10">
             <div className="max-w-[1920px] mx-auto">
 
                 {/* Header */}
@@ -60,11 +61,14 @@ export default function Arquitectura() {    const [lightboxImage, setLightboxIma
                             Descargar PDF
                         </a>
                     </div>
-                    <div className="p-8 flex items-center justify-center bg-white">
+                    <div 
+                        className="p-8 flex items-center justify-center bg-white cursor-pointer"
+                        onClick={() => setLightboxImage({ src: '/resources/imagenes pdfs/Lamina1/plantaArquitectonica.jpg', alt: 'Planta Arquitectónica Detallada - Click para ampliar' })}
+                    >
                         <img
-                            src="/resources/imagenes pdfs/Lamina1/principal1.jpg"
-                            alt="Planta Arquitectónica Principal"
-                            className="w-full h-auto object-contain"
+                            src="/resources/imagenes pdfs/Lamina1/plantaArquitectonica.jpg"
+                            alt="Planta Arquitectónica"
+                            className="w-full h-auto object-contain hover:opacity-90 transition-opacity"
                         />
                     </div>
                 </motion.div>
@@ -85,7 +89,7 @@ export default function Arquitectura() {    const [lightboxImage, setLightboxIma
                         </div>
                         <div className="p-8 flex items-center justify-center bg-editorial-concrete/5">
                             <img
-                                src="/resources/imagenes pdfs/Lamina1/PlantaArquitectonica.png"
+                                src="/resources/imagenes pdfs/Lamina1/plantaArquitectonica.jpg"
                                 alt="Planta Arquitectónica"
                                 className="w-full h-auto object-contain"
                             />
@@ -232,30 +236,6 @@ export default function Arquitectura() {    const [lightboxImage, setLightboxIma
                                 (medicamentos, trabajo limpio/sucio, coordinación).
                             </p>
                         </div>
-                    </div>
-                </motion.div>
-
-                {/* Descarga del Programa Médico */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mt-8 bg-editorial-concrete/5 border border-editorial-stone/10 rounded-sm p-6"
-                >
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <h4 className="font-sans font-semibold text-sm text-editorial-dark mb-1">Programa Médico Arquitectónico</h4>
-                            <p className="text-xs text-editorial-stone">Tabla completa de áreas y especificaciones técnicas</p>
-                        </div>
-                        <a 
-                            href="/resources/desgloce lamina 1-20251229T234551Z-1-001/desgloce lamina 1/PROGRAMA MEDICO ARQUITECTONICO.pdf" 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 bg-editorial-dark text-white text-xs uppercase tracking-widest hover:bg-editorial-stone transition-colors rounded-sm"
-                        >
-                            <Download className="w-4 h-4" />
-                            Descargar PDF
-                        </a>
                     </div>
                 </motion.div>
 
