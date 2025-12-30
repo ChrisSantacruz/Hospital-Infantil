@@ -32,8 +32,10 @@ export default function RootLayout({
 
                     <div className="hidden md:flex items-center gap-8 font-sans text-sm tracking-widest uppercase text-editorial-stone">
                         <Link href="#proyecto" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Proyecto</Link>
-                        <Link href="#materiales" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Materiales</Link>
-                        <Link href="#sistemas" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Sistemas</Link>
+                        <Link href="#arquitectura" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Arquitectura</Link>
+                        <Link href="#materiales" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Materialidad</Link>
+                        <Link href="#sustentabilidad" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Sustentabilidad</Link>
+                        <Link href="#galeria" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Galería</Link>
                     </div>
 
                     <Link
@@ -70,11 +72,39 @@ export default function RootLayout({
                                     Proyecto
                                 </Link>
                                 <Link 
+                                    href="#arquitectura" 
+                                    onClick={closeMenu}
+                                    className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
+                                >
+                                    Arquitectura
+                                </Link>
+                                <Link 
                                     href="#materiales" 
                                     onClick={closeMenu}
                                     className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
                                 >
-                                    Materiales
+                                    Materialidad
+                                </Link>
+                                <Link 
+                                    href="#cielos" 
+                                    onClick={closeMenu}
+                                    className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
+                                >
+                                    Cielos
+                                </Link>
+                                <Link 
+                                    href="#sustentabilidad" 
+                                    onClick={closeMenu}
+                                    className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
+                                >
+                                    Sustentabilidad
+                                </Link>
+                                <Link 
+                                    href="#ejecucion" 
+                                    onClick={closeMenu}
+                                    className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
+                                >
+                                    Ejecución
                                 </Link>
                                 <Link 
                                     href="#sistemas" 
@@ -82,6 +112,25 @@ export default function RootLayout({
                                     className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
                                 >
                                     Sistemas
+                                </Link>
+                                <Link                                     href="#acabados" 
+                                    onClick={closeMenu}
+                                    className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
+                                >
+                                    Acabados
+                                </Link>
+                                <Link                                     href="#documentacion" 
+                                    onClick={closeMenu}
+                                    className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
+                                >
+                                    Documentación
+                                </Link>
+                                <Link 
+                                    href="#galeria" 
+                                    onClick={closeMenu}
+                                    className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
+                                >
+                                    Galería
                                 </Link>
                                 <Link 
                                     href="#contacto" 
@@ -110,7 +159,7 @@ export default function RootLayout({
                         </a>
                     </div>
                     <div className="text-xs font-sans text-editorial-stone/60 uppercase tracking-widest">
-                        © {new Date().getFullYear()} CSN Arquitectos. Todos los derechos reservados.
+                        © {new Date().getFullYear()} Hospital Infantil Los Ángeles. Todos los derechos reservados.
                     </div>
                 </footer>
             </body>

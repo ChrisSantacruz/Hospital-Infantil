@@ -18,14 +18,17 @@ export default function Hero() {
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                 >
                     <span className="block font-sans text-xs uppercase tracking-[0.2em] text-editorial-stone mb-6">
-                        Proyecto Destacado
+                        Proyecto Destacado / RES 1633 de 2025
                     </span>
                     <h1 className="font-editorial text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-editorial-dark mb-8 text-balance">
                         Reorganización Funcional <br />
-                        <span className="text-editorial-stone italic">Hospital Infantil Los Ángeles</span>
+                        <span className="text-editorial-stone italic">Servicio Urgencias</span>
                     </h1>
+                    <p className="font-sans text-editorial-stone text-sm md:text-base leading-relaxed max-w-md mb-4 font-light">
+                        <strong className="text-editorial-dark">Tipo de Proyecto:</strong> Remodelación y Reorganización de Urgencias Pediátricas
+                    </p>
                     <p className="font-sans text-editorial-stone text-sm md:text-base leading-relaxed max-w-md mb-12 font-light">
-                        La propuesta arquitectónica se desarrolló bajo los lineamientos de la Resolución 1633 de 2025, priorizando asepsia, seguridad, durabilidad y humanización.
+                        Propuesta arquitectónica desarrollada bajo los lineamientos de la <strong className="text-editorial-dark">Resolución 1633 de 2025</strong>, priorizando asepsia, seguridad, durabilidad y humanización en espacios de atención pediátrica.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">

@@ -40,8 +40,8 @@ export default function ProjectSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        Resolución 1633 de 2025: <br />
-                        <span className="text-editorial-stone italic">Priorizando Asepsia y Humanización</span>
+                        Reorganización Funcional Servicio de Urgencias <br />
+                        <span className="text-editorial-stone italic">Hospital Infantil Los Ángeles</span>
                     </motion.h2>
 
                     <motion.p
