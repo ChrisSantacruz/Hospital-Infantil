@@ -26,7 +26,7 @@ export default function RootLayout({
                 {/* Navigation Bar */}
                 <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 md:px-12 md:py-6 bg-white/5 backdrop-blur-md transition-all duration-300 border-b border-white/10">
                     <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-                        <img src="/resources/LogoCSN.png" alt="CSN Arquitectos Constructores" className="h-16 md:h-20 w-auto" />
+                        <img src="/LogoCSN.png" alt="CSN Arquitectos Constructores" className="h-16 md:h-20 w-auto" />
                     </Link>
 
                     <div className="hidden md:flex items-center gap-6 font-sans text-xs tracking-widest uppercase text-editorial-stone">
