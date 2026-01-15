@@ -262,6 +262,7 @@ export default function ElectricalSystems() {
                 <ImageLightbox
                     src={lightboxImage.src}
                     alt={lightboxImage.alt}
+                    isOpen={!!lightboxImage}
                     onClose={() => setLightboxImage(null)}
                 />
             )}

@@ -289,6 +289,7 @@ export default function HydraulicSystems() {
                 <ImageLightbox
                     src={lightboxImage.src}
                     alt={lightboxImage.alt}
+                    isOpen={!!lightboxImage}
                     onClose={() => setLightboxImage(null)}
                 />
             )}
