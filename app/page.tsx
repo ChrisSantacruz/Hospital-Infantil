@@ -7,6 +7,8 @@ import Sustainability from '@/components/Sustainability';
 import Execution from '@/components/Execution';
 import Demolitions from '@/components/Demolitions';
 import Acabados from '@/components/Acabados';
+import ElectricalSystems from '@/components/ElectricalSystems';
+import HydraulicSystems from '@/components/HydraulicSystems';
 import Systems from '@/components/Systems';
 import TechnicalDocs from '@/components/TechnicalDocs';
 import Gallery from '@/components/Gallery';
@@ -58,22 +60,32 @@ export default function Home() {
                 <Acabados />
             </div>
             
-            {/* 10. SISTEMAS TÉCNICOS */}
+            {/* 10. SISTEMAS ELÉCTRICOS (LÁMINAS 8-12) */}
+            <div id="electricos">
+                <ElectricalSystems />
+            </div>
+            
+            {/* 11. SISTEMAS HIDRÁULICOS (LÁMINAS 13-16) */}
+            <div id="hidraulicos">
+                <HydraulicSystems />
+            </div>
+            
+            {/* 12. SISTEMAS TÉCNICOS */}
             <div id="sistemas">
                 <Systems />
             </div>
             
-            {/* 11. DOCUMENTACIÓN TÉCNICA */}
+            {/* 13. DOCUMENTACIÓN TÉCNICA */}
             <div id="documentacion">
                 <TechnicalDocs />
             </div>
             
-            {/* 12. GALERÍA DE RENDERS */}
+            {/* 14. GALERÍA DE RENDERS */}
             <div id="galeria">
                 <Gallery />
             </div>
             
-            {/* 13. CONSULTAR AL ESTUDIO (IA) */}
+            {/* 15. CONSULTAR AL ESTUDIO (IA) */}
             <AiAssistant />
         </div>
     );

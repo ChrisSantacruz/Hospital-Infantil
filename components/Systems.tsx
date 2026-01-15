@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Download, Zap, Droplets, Wind } from 'lucide-react';
+import { Download, Zap, Droplets, Wind, Lightbulb, Waves } from 'lucide-react';
+import Link from 'next/link';
 
 const systems = [
     {
@@ -10,13 +11,15 @@ const systems = [
         title: "Sistema Eléctrico",
         description: "Red eléctrica regulada con respaldo de emergencia, iluminación LED, tomas hospitalarias y protecciones diferenciales.",
         specs: [
-            "Iluminación general: 300-500 lux según área",
-            "Circuitos independientes por zona funcional",
-            "Tableros con protección térmica y diferencial",
-            "Sistema de respaldo UPS en áreas críticas",
-            "Tomas hospitalarias grado médico (rojo/verde)"
+            "Iluminación general: Temperatura color 3500-4500K, paneles LED 18W/24W",
+            "Circuitos independientes: CN (normales), TR (regulados), TC (críticos)",
+            "Tableros: TN, TR y TC con protección térmica y diferencial",
+            "Emergencia: Sistema LED 5W con baterías en áreas críticas",
+            "Tomas hospitalarias: GFCI 120V-15A, grado médico en reanimación",
+            "Detección incendios: Fire Lite 200XI, 30 detectores, 4 estaciones manuales"
         ],
-        pdf: null // Add PDF path when available
+        link: "#electricos",
+        linkText: "Ver Sistemas Eléctricos Completos"
     },
     {
         id: "hydraulic",
@@ -24,13 +27,15 @@ const systems = [
         title: "Sistema Hidráulico",
         description: "Red de agua potable fría con tanque de reserva, grifería temporizada y no manual en áreas críticas.",
         specs: [
-            "Tanque de reserva de agua potable",
-            "Red en tubería PVC presión clase 10",
-            "Grifería temporizada en baños públicos",
-            "Lavamanos no manuales en reanimación",
-            "Válvulas de corte por sector funcional"
+            "Tubería principal: PVC RDE 13.5 Ø3/4\" con ramales Ø1/2\"",
+            "Válvulas: Compuerta y anti-fraude por sector funcional",
+            "Conexiones: Lavamanos (LM), inodoros (WC), lavaplatos (LP)",
+            "Grifería: Temporizada en baños públicos, no manual en reanimación",
+            "Sistema caliente: Buje roscado 2\"×1\" con aislamiento térmico",
+            "Accesorios: Tees, codos, bujes y válvulas universales Ø1/2\""
         ],
-        pdf: null // Add PDF path when available
+        link: "#hidraulicos",
+        linkText: "Ver Sistemas Hidráulicos Completos"
     },
     {
         id: "sanitary",
@@ -38,13 +43,16 @@ const systems = [
         title: "Sistema Sanitario",
         description: "Red de evacuación de aguas residuales con ventilación adecuada, sifones y conexión a sistema general.",
         specs: [
-            "Red sanitaria en PVC sanitaria 2\" y 4\"",
-            "Cajas de inspección cada 15m",
-            "Ventilación de columnas sanitarias",
-            "Sifones individuales en todos los aparatos",
-            "Pendientes mínimas 2% en ramales"
+            "Desagües principales: PVC sanitaria Ø4\" con pendiente 2%",
+            "Ramales individuales: PVC Ø2\" con sifones en todos los aparatos",
+            "Colectores generales: PVC Ø6\" (hasta 16.54m de longitud)",
+            "Bajantes: BAN (aguas negras) y BALL (aguas lluvias) Ø4\"",
+            "Cajas de inspección: 0.90×0.90m y 0.74×0.74m cada 15m máximo",
+            "Ventilación: Columnas VEN Ø3\" para evitar sifones",
+            "Trampa especializada: Yesos en sala de procedimientos"
         ],
-        pdf: null // Add PDF path when available
+        link: "#hidraulicos",
+        linkText: "Ver Instalaciones Sanitarias Completas"
     }
 ];
 
@@ -99,15 +107,16 @@ export default function Systems() {
                         viewport={{ once: true }}
                     >
                         <span className="block font-sans text-xs uppercase tracking-[0.2em] text-editorial-stone mb-6">
-                            Sistemas Técnicos
+                            Resumen de Sistemas Técnicos
                         </span>
                         <h2 className="font-editorial text-4xl md:text-5xl text-editorial-dark mb-8 leading-tight">
                             Instalaciones Especializadas <br />
-                            <span className="text-editorial-stone italic">Eléctricas · Hidráulicas · Sanitarias</span>
+                            <span className="text-editorial-stone italic">Integración Eléctrica · Hidráulica · Sanitaria</span>
                         </h2>
                         <p className="font-sans text-editorial-stone text-lg leading-relaxed font-light max-w-2xl">
-                            Diseño integral de redes eléctricas e hidrosanitarias, garantizando seguridad técnica, 
-                            eficiencia operativa y cumplimiento normativo para espacios de atención pediátrica.
+                            Diseño integral de redes eléctricas e hidrosanitarias con especificaciones técnicas detalladas 
+                            en las secciones dedicadas. Este resumen consolida los aspectos principales de cada sistema 
+                            garantizando seguridad, eficiencia y cumplimiento normativo para atención pediátrica.
                         </p>
                     </motion.div>
                 </div>
@@ -136,28 +145,27 @@ export default function Systems() {
                                         <p className="font-sans text-sm text-editorial-stone leading-relaxed mb-6">
                                             {system.description}
                                         </p>
-                                        {system.pdf && (
-                                            <a 
-                                                href={system.pdf} 
-                                                target="_blank"
+                                        {system.link && (
+                                            <Link 
+                                                href={system.link}
                                                 className="inline-flex items-center gap-2 px-4 py-3 bg-editorial-dark text-white text-xs uppercase tracking-widest hover:bg-editorial-stone transition-colors rounded-sm"
                                             >
-                                                <Download className="w-4 h-4" />
-                                                Descargar Plano
-                                            </a>
+                                                <system.icon className="w-4 h-4" />
+                                                {system.linkText}
+                                            </Link>
                                         )}
                                     </div>
 
                                     {/* Right: Specifications */}
                                     <div className="lg:w-2/3">
                                         <h4 className="font-sans font-bold text-sm text-editorial-dark mb-4 pb-2 border-b border-editorial-stone/10">
-                                            Especificaciones Técnicas
+                                            Especificaciones Técnicas Principales
                                         </h4>
                                         <ul className="space-y-3">
                                             {system.specs.map((spec, specIdx) => (
-                                                <li key={specIdx} className="flex items-start gap-3 text-sm text-editorial-stone">
+                                                <li key={specIdx} className="flex items-start gap-3 text-sm text-editorial-stone leading-relaxed">
                                                     <span className="w-1.5 h-1.5 rounded-full bg-editorial-dark mt-2 flex-shrink-0"></span>
-                                                    <span>{spec}</span>
+                                                    <span className="font-light">{spec}</span>
                                                 </li>
                                             ))}
                                         </ul>

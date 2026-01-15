@@ -35,6 +35,8 @@ export default function RootLayout({
                         <Link href="#materiales" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Diseño</Link>
                         <Link href="#sustentabilidad" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Sustentabilidad</Link>
                         <Link href="#ejecucion" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Ejecución</Link>
+                        <Link href="#electricos" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Eléctricos</Link>
+                        <Link href="#hidraulicos" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Hidráulicos</Link>
                         <a href="/resources/PRESUPUESTO GENERAL DE OBRA.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Presupuesto</a>
                         <Link href="#documentacion" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Descargas</Link>
                         <Link href="#galeria" className="hover:text-editorial-dark hover:underline decoration-[0.5px] underline-offset-4 transition-all">Galería</Link>
@@ -121,6 +123,20 @@ export default function RootLayout({
                                     className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
                                 >
                                     Acabados
+                                </Link>
+                                <Link 
+                                    href="#electricos" 
+                                    onClick={closeMenu}
+                                    className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
+                                >
+                                    Sistemas Eléctricos
+                                </Link>
+                                <Link 
+                                    href="#hidraulicos" 
+                                    onClick={closeMenu}
+                                    className="px-8 py-4 font-sans text-sm tracking-widest uppercase text-editorial-stone hover:bg-editorial-dark/5 hover:text-editorial-dark transition-all"
+                                >
+                                    Sistemas Hidráulicos
                                 </Link>
                                 <a 
                                     href="/resources/presupuesto_obra.pdf" 
